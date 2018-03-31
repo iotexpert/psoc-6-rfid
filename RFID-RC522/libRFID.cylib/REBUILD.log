@@ -1,0 +1,111 @@
+--------------- Rebuild Started: 03/29/2018 14:29:29 Project: libRFID, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\MFRC522.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\MFRC522Debug.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\MFRC522Extended.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\MFRC522Hack.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\Arduino.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\Serial.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\SPI.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\interface.o"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\libRFID.a"
+Deleting file ".\CortexM4\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=.\CortexM0p\ARM_GCC_541\Debug/MFRC522.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c MFRC522.cpp -o .\CortexM0p\ARM_GCC_541\Debug\MFRC522.o
+In file included from MFRC522.h:78:0,
+                 from MFRC522.cpp:8:
+require_cpp11.h:9:2: error: #error "This library needs at least a C++11 compliant compiler, maybe compiler argument for C++11 support is missing or if you use Arduino IDE upgrade to version >=1.6.6"
+ #error "This library needs at least a C++11 compliant compiler, maybe compiler argument for C++11 support is missing or if you use Arduino IDE upgrade to version >=1.6.6"
+  ^
+In file included from MFRC522.cpp:8:0:
+MFRC522.h:142:2: warning: identifier 'constexpr' is a keyword in C++11 [-Wc++0x-compat]
+  static constexpr byte FIFO_SIZE = 64;  // The FIFO is 64 bytes.
+  ^
+In file included from MFRC522.cpp:8:0:
+MFRC522.h:371:2: warning: identifier 'nullptr' is a keyword in C++11 [-Wc++0x-compat]
+  StatusCode PCD_TransceiveData(byte *sendData, byte sendLen, byte *backData, byte *backLen, byte *validBits = nullptr, byte rxAlign = 0, bool checkCRC = false);
+  ^
+In file included from MFRC522.cpp:8:0:
+MFRC522.h:142:9: error: 'constexpr' does not name a type
+  static constexpr byte FIFO_SIZE = 64;  // The FIFO is 64 bytes.
+         ^
+MFRC522.h:142:9: note: C++11 'constexpr' only available with -std=c++11 or -std=gnu++11
+MFRC522.h:144:9: error: 'constexpr' does not name a type
+  static constexpr uint8_t UNUSED_PIN = UINT8_MAX;
+         ^
+MFRC522.h:144:9: note: C++11 'constexpr' only available with -std=c++11 or -std=gnu++11
+MFRC522.h:148:22: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum PCD_Register : byte {
+                      ^
+MFRC522.h:223:21: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum PCD_Command : byte {
+                     ^
+In file included from MFRC522.cpp:8:0:
+MFRC522.h:238:20: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum PCD_RxGain : byte {
+                    ^
+MFRC522.h:253:22: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum PICC_Command : byte {
+                      ^
+MFRC522.h:287:19: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum PICC_Type : byte {
+                   ^
+MFRC522.h:303:20: warning: scoped enums only available with -std=c++11 or -std=gnu++11
+  enum StatusCode : byte {
+                    ^
+MFRC522.h:371:111: error: 'nullptr' was not declared in this scope
+  StatusCode PCD_TransceiveData(byte *sendData, byte sendLen, byte *backData, byte *backLen, byte *validBits = nullptr, byte rxAlign = 0, bool checkCRC = false);
+                                                                                                               ^
+MFRC522.h:372:112: error: 'nullptr' was not declared in this scope
+  StatusCode PCD_CommunicateWithPICC(byte command, byte waitIRq, byte *sendData, byte sendLen, byte *backData = nullptr, byte *backLen = nullptr, byte *validBits = nullptr, byte rxAlign = 0, bool checkCRC = false);
+                                                                                                                ^
+MFRC522.h:372:137: error: 'nullptr' was not declared in this scope
+  StatusCode PCD_CommunicateWithPICC(byte command, byte waitIRq, byte *sendData, byte sendLen, byte *backData = nullptr, byte *backLen = nullptr, byte *validBits = nullptr, byte rxAlign = 0, bool checkCRC = false);
+                                                                                                                                         ^
+MFRC522.h:372:164: error: 'nullptr' was not declared in this scope
+  StatusCode PCD_CommunicateWithPICC(byte command, byte waitIRq, byte *sendData, byte sendLen, byte *backData = nullptr, byte *backLen = nullptr, byte *validBits = nullptr, byte rxAlign = 0, bool checkCRC = false);
+                                                                                                                                                                    ^
+MFRC522.h: In constructor 'MFRC522::MFRC522()':
+MFRC522.h:337:22: error: 'UNUSED_PIN' was not declared in this scope
+  MFRC522() : MFRC522(UNUSED_PIN, UNUSED_PIN) {};
+                      ^
+MFRC522.h:337:44: warning: delegating constructors only available with -std=c++11 or -std=gnu++11
+  MFRC522() : MFRC522(UNUSED_PIN, UNUSED_PIN) {};
+                                            ^
+MFRC522.cpp: In member function 'void MFRC522::PCD_Init()':
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+MFRC522.cpp:179:28: error: 'UNUSED_PIN' was not declared in this scope
+  if (_resetPowerDownPin != UNUSED_PIN) {
+                            ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::PICC_REQA_or_WUPA(byte, byte*, byte*)':
+MFRC522.cpp:555:20: error: 'nullptr' was not declared in this scope
+  if (bufferATQA == nullptr || *bufferSize < 2) { // The ATQA response is 2 bytes long.
+                    ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::PICC_HaltA()':
+MFRC522.cpp:820:54: error: 'nullptr' was not declared in this scope
+  result = PCD_TransceiveData(buffer, sizeof(buffer), nullptr, 0);
+                                                      ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::PCD_Authenticate(byte, byte, MFRC522::MIFARE_Key*, MFRC522::Uid*)':
+MFRC522.cpp:869:87: error: call to 'MFRC522::StatusCode MFRC522::PCD_CommunicateWithPICC(byte, byte, byte*, byte, byte*, byte*, byte*, byte, bool)' uses the default argument for parameter 5, which is not yet defined
+  return PCD_CommunicateWithPICC(PCD_MFAuthent, waitIRq, &sendData[0], sizeof(sendData));
+                                                                                       ^
+MFRC522.cpp:869:87: error: call to 'MFRC522::StatusCode MFRC522::PCD_CommunicateWithPICC(byte, byte, byte*, byte, byte*, byte*, byte*, byte, bool)' uses the default argument for parameter 6, which is not yet defined
+MFRC522.cpp:869:87: error: call to 'MFRC522::StatusCode MFRC522::PCD_CommunicateWithPICC(byte, byte, byte*, byte, byte*, byte*, byte*, byte, bool)' uses the default argument for parameter 7, which is not yet defined
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::MIFARE_Read(byte, byte*, byte*)':
+MFRC522.cpp:904:16: error: 'nullptr' was not declared in this scope
+  if (buffer == nullptr || *bufferSize < 18) {
+                ^
+MFRC522.cpp:918:59: error: 'nullptr' was not declared in this scope
+  return PCD_TransceiveData(buffer, 4, buffer, bufferSize, nullptr, 0, true);
+                                                           ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::MIFARE_Write(byte, byte*, byte)':
+MFRC522.cpp:939:16: error: 'nullptr' was not declared in this scope
+  if (buffer == nullptr || bufferSize < 16) {
+                ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::MIFARE_Ultralight_Write(byte, byte*, byte)':
+MFRC522.cpp:974:16: error: 'nullptr' was not declared in this scope
+  if (buffer == nullptr || bufferSize < 4) {
+                ^
+MFRC522.cpp: In member function 'MFRC522::StatusCode MFRC522::PCD_MIFARE_Transceive(byte*, byte, bool)':
+MFRC522.cpp:1207:18: error: 'nullptr' was not declared in this scope
+  if (sendData == nullptr || sendLen > 16) {
+                  ^
+--------------- Rebuild Failed: 03/29/2018 14:29:32 ---------------

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_7a7929f8-5e3b-4f86-a093-2d4ee6513111 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtProjectCustomData" version="1">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="47ec7058-2f43-4a2f-ae73-172624e235df">
+<CyGuid_47ec7058-2f43-4a2f-ae73-172624e235df type_name="CyDesigner.Common.ProjMgmt.Model.CyConfDepList" version="1">
+<name v="cmpl_deps">
+<CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
+<dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" xml_contents_version="2">
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM4\ARM_GCC_541\Debug\Arduino.o">
+<dep name=".\Arduino.cpp" />
+<dep name=".\Arduino.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+</file>
+<file name=".\Arduino.cpp" />
+<file name=".\Arduino.h" />
+<file name=".\SPI.h" />
+<file name=".\Serial.h" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\MFRC522.o">
+<dep name=".\Arduino.h" />
+<dep name=".\MFRC522.cpp" />
+<dep name=".\MFRC522.h" />
+<dep name=".\MFRC522Debug.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+<dep name=".\deprecated.h" />
+<dep name=".\require_cpp11.h" />
+</file>
+<file name=".\MFRC522.cpp" />
+<file name=".\MFRC522.h" />
+<file name=".\MFRC522Debug.h" />
+<file name=".\deprecated.h" />
+<file name=".\require_cpp11.h" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\MFRC522Debug.o">
+<dep name=".\Arduino.h" />
+<dep name=".\MFRC522.h" />
+<dep name=".\MFRC522Debug.cpp" />
+<dep name=".\MFRC522Debug.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+<dep name=".\deprecated.h" />
+<dep name=".\require_cpp11.h" />
+</file>
+<file name=".\MFRC522Debug.cpp" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\MFRC522Extended.o">
+<dep name=".\Arduino.h" />
+<dep name=".\MFRC522.h" />
+<dep name=".\MFRC522Extended.cpp" />
+<dep name=".\MFRC522Extended.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+<dep name=".\deprecated.h" />
+<dep name=".\require_cpp11.h" />
+</file>
+<file name=".\MFRC522Extended.cpp" />
+<file name=".\MFRC522Extended.h" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\MFRC522Hack.o">
+<dep name=".\Arduino.h" />
+<dep name=".\MFRC522.h" />
+<dep name=".\MFRC522Debug.h" />
+<dep name=".\MFRC522Hack.cpp" />
+<dep name=".\MFRC522Hack.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+<dep name=".\deprecated.h" />
+<dep name=".\require_cpp11.h" />
+</file>
+<file name=".\MFRC522Hack.cpp" />
+<file name=".\MFRC522Hack.h" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\SPI.o">
+<dep name=".\SPI.cpp" />
+<dep name=".\SPI.h" />
+</file>
+<file name=".\SPI.cpp" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\Serial.o">
+<dep name=".\Serial.cpp" />
+<dep name=".\Serial.h" />
+</file>
+<file name=".\Serial.cpp" />
+<file name=".\CortexM4\ARM_GCC_541\Debug\interface.o">
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_armcc.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_armclang.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_compiler.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_gcc.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\core_cm0plus.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\core_cm4.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_backup.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_cpuss.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_crypto.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_csd.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ctbm.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ctdac.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_dw.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_efuse.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_efuse_data.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_fault.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_flashc.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_gpio.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_headers.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_hsiom.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_i2s.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ipc.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_lcd.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_lpcomp.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_pass.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_pdm.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_peri.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_profile.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_prot.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_sar.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_scb.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_sflash.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_smartio.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_smif.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_srss.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_tcpwm.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_udb.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_usbfs.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6246bzi_d04.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d34.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d44.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d54.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247fdi_d04.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247fdi_d34.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy_device_headers.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\gpio_psoc62_124_bga.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\gpio_psoc62_80_wlcsp.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\psoc62_config.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\system_psoc62.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral\gpio\cy_gpio.h" />
+<dep name="C:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral\syslib\cy_syslib.h" />
+<dep name=".\Arduino.h" />
+<dep name=".\MFRC522.h" />
+<dep name=".\SPI.h" />
+<dep name=".\Serial.h" />
+<dep name=".\deprecated.h" />
+<dep name=".\interface.cpp" />
+<dep name=".\require_cpp11.h" />
+<dep name=".\rfid.h" />
+</file>
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_armcc.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_armclang.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_compiler.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\cmsis_gcc.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\core_cm0plus.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include\core_cm4.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_backup.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_cpuss.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_crypto.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_csd.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ctbm.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ctdac.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_dw.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_efuse.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_efuse_data.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_fault.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_flashc.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_gpio.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_headers.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_hsiom.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_i2s.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_ipc.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_lcd.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_lpcomp.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_pass.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_pdm.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_peri.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_profile.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_prot.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_sar.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_scb.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_sflash.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_smartio.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_smif.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_srss.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_tcpwm.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_udb.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip\cyip_usbfs.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6246bzi_d04.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d34.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d44.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247bzi_d54.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247fdi_d04.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy8c6247fdi_d34.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\cy_device_headers.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\gpio_psoc62_124_bga.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\gpio_psoc62_80_wlcsp.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\psoc62_config.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include\system_psoc62.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral\gpio\cy_gpio.h" />
+<file name="C:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral\syslib\cy_syslib.h" />
+<file name=".\interface.cpp" />
+<file name=".\rfid.h" />
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
+</dependency_info>
+<dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p" xml_contents_version="2">
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1" />
+</dependency_info>
+</CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
+</name>
+<name v="lbry_deps">
+<CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
+<dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" xml_contents_version="2">
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM4\ARM_GCC_541\Debug\libRFID.a">
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Debug.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Extended.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Hack.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\Arduino.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\Serial.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\SPI.o" />
+<dep name="..\..\..\PSoC" />
+<dep name=".\Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\interface.o" />
+</file>
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
+</dependency_info>
+</CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
+</name>
+</CyGuid_47ec7058-2f43-4a2f-ae73-172624e235df>
+</dataGuid>
+<dataGuid v="b0374e30-ce3a-47f2-ad85-821643292c68">
+<CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68 type_name="CyDesigner.Common.ProjMgmt.Common.CyCmdLineData" version="2">
+<genericCmdLineData>
+<name v="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4">
+<name_val_pair name="MFRC522.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="MFRC522Debug.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="MFRC522Extended.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="MFRC522Hack.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="Arduino.c" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Arduino.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="Serial.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="SPI.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="interface.cpp" v="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\drivers\peripheral&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\psoc62\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\cmsis\include&quot; &quot;-IC:\Program Files (x86)\Cypress\PDL\3.0.1\devices\psoc6\ip&quot; -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY8C6247BZI_D54 -Wall -ffunction-sections -ffat-lto-objects -Og --std=c++11 -fno-rtti -fno-exceptions" />
+<name_val_pair name="C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\RFIDLib.a" v="-rs .\CortexM4\ARM_GCC_541\Debug\RFIDLib.a &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Debug.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Extended.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Hack.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\Arduino.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\Serial.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\SPI.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\RFIDLib.cylib\CortexM4\ARM_GCC_541\Debug\interface.o&quot;" />
+<name_val_pair name="C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\libRFID.a" v="-rs .\CortexM4\ARM_GCC_541\Debug\libRFID.a &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Debug.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Extended.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\MFRC522Hack.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\Arduino.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\Serial.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\SPI.o&quot; &quot;C:\Users\ButchGriffin\Documents\PSoC Creator\RFID\libRFID.cylib\CortexM4\ARM_GCC_541\Debug\interface.o&quot;" />
+</name>
+<name v="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p">
+<name_val_pair name="MFRC522.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="MFRC522Debug.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="MFRC522Extended.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="MFRC522Hack.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Arduino.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Serial.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="SPI.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="interface.cpp" v="-mcpu=cortex-m0plus -mthumb -I. -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+</name>
+</genericCmdLineData>
+<codeGenCmdLineTag v="" />
+</CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<properties />
+</CyGuid_7a7929f8-5e3b-4f86-a093-2d4ee6513111>
+</CyXmlSerializer>

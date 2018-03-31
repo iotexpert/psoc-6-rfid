@@ -1,0 +1,12 @@
+*.arh
+*~
+*/*.cy*/Cortex*/*
+*/*.cy*/Export/*
+*/*.cy*/Generated_Source
+*/*.cy*/codegentemp
+.DS_Store
+*/*.cydsn/Backup
+*/*.cydsn/Archive
+
+
+
