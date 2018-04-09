@@ -1,33 +1,23 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
-
 #include "SPI.h"
 #include <assert.h>
+#include <stdio.h>
+
+#include "scb/cy_scb_common.h"
+#include "scb/cy_scb_spi.h"
 
 SPIClass SPI ;
 
+
+
 SPIClass::SPIClass()
 {
+    printf("Created SPI Class this=%X\r\n",this);
 }
 
-int SPIClass::init(int scbinst)
+int SPIClass::init(CySCB_Type * scbinst)
 {
     m_scbinst = scbinst ;
     
-    //
-    // TODO - initialize the given SCB block as SPI
-    //
-    
-    assert(0) ;
     return 0 ;
 }
 
@@ -40,17 +30,25 @@ void SPIClass::beginTransaction(const SPISettings &settings)
     //        get with the various clock dividers on a Arduino, and
     //        the write the code to get the same.
     //
-    assert(0) ;
+    //assert(0) ;
+    
+    // For now assume that SPI port is configured
+    
 }
 
 uint8_t SPIClass::transfer(uint8_t data)
 {
-    //
-    // TODO - write the code to transfer out a single byte and receive
-    //        a single byte at the same time
-    //
-    assert(0) ;
-    return 0 ;
+    uint8_t rval;
+    
+    Cy_SCB_SPI_Write(m_scbinst,data);
+    
+    while(Cy_SCB_SPI_GetNumInRxFifo(m_scbinst) == 0); // busy wait until there is a byte
+    
+    rval = Cy_SCB_SPI_Read(m_scbinst);
+    
+//    printf("Wrote=0x%X Read=%X\r\n",data,rval);
+    return rval;
+
 }
 
 void SPIClass::endTransaction()
@@ -58,7 +56,9 @@ void SPIClass::endTransaction()
     //
     // TODO - end the current transaction
     //
-    assert(0) ;
+    //assert(0) ;
+    // for now assume that you dont need to do anything.
+    
 }
 
 /* [] END OF FILE */

@@ -1,88 +1,153 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
-
 #include "Arduino.h"
+#include "gpio/cy_gpio.h"
 #include <assert.h>
+#include "ArdInterface.h"
+#include <stdio.h>
 
-//
-// TODO - the RFID library refers to pins as a single integer.  We use
-//        port and pin within the port to refer to pins.  This file will need
-//        to contain a mapping from the pin number to a specific port
-//        and pin.  For a one time use, this mapping can be hard coded here,
-//        but it could be generalized, where we add a function to register
-//        a mapping from a RFID pin to a PSoC pin.
-//
+psocPin_t *psocPinMap;
+int psocPinMapSize=0;
+arduino_timing_t *arduino_timing;
+
+void psocArduinoConfigure(psocPin_t *pinMap , int pinMapSize, arduino_timing_t *ardTimingFunctions)
+{
+    psocPinMap = pinMap;
+    psocPinMapSize = pinMapSize; 
+    arduino_timing = ardTimingFunctions;
+}
+
+
+void psocArduinoTestPin(int pin)
+{
+    pinMode(pin,OUTPUT);
+    while(1)
+    {
+        int current = digitalRead(pin);
+        current = !current;
+        
+        digitalWrite(pin,!digitalRead(pin));
+        delay(200);
+    }
+}
+
+void psocArduinoTestPin1(int inpin, int outpin)
+{
+    int val;
+    pinMode(inpin,INPUT);
+    pinMode(outpin,OUTPUT);
+    while(1)
+    {
+        val = digitalRead(inpin);
+        digitalWrite(outpin,val);
+    }
+}
+
+void psocArduinoTestPin2(int inpin, int outpin)
+{
+    int val;
+    pinMode(inpin,INPUT_PULLUP);
+    pinMode(outpin,OUTPUT);
+    while(1)
+    {
+        val = digitalRead(inpin);
+        digitalWrite(outpin,val);
+    }
+}
+
+
+psocPin_t *findArduinoPin(int pin)
+{
+    for(int i = 0;i<psocPinMapSize; i++)
+    {
+        if(psocPinMap[i].ardNumber == pin)
+        {
+            return &psocPinMap[i];
+        }
+    }
+    return 0;
+}
 
 void digitalWrite(int pin, int value)
 {
-    //
-    // TODO - write the code to set the value of a pin
-    //        that is configured as an output pin.  This
-    //        should be done using PDL calls.
-    //
-    assert(0) ;     // Remove me when this is implemented
+    psocPin_t *myPin;
+    myPin = findArduinoPin(pin);
+    assert(myPin != 0);
+    
+    Cy_GPIO_Write(myPin->psocPort,myPin->psocPin,value);
 }
 
 int digitalRead(int pin)
 {
-    //
-    // TODO - write the code to get the value of a pin
-    //        that is configured as an output pin.  This
-    //        should be done using PDL calls.
-    //
-    assert(0) ;     // Remove me when this is implemented
-    return 0 ;
+    psocPin_t *myPin;
+    myPin = findArduinoPin(pin);
+    assert(myPin != 0);
+    int rval = Cy_GPIO_Read(myPin->psocPort,myPin->psocPin);
+    rval = rval>0?1:0;
+    return  rval;
 }
 
 void pinMode(int pin, int mode)
 {
-    //
-    // TODO - set this pin to the type of pin given by mode
-    //        mode will be INPUT or OUTPUT
-    //
-    assert(0) ;     // Remove me when this is implemented
+
+    psocPin_t *myPin;
+    myPin = findArduinoPin(pin);
+    assert(myPin != 0);
+    
+    //printf("Initialzing pin=%d PSoC Port=0x%X PSoC Pin=%d\r\n",pin,myPin->psocPort,myPin->psocPin); 
+    
+    cy_stc_gpio_pin_config_t pinConfig = {
+        /*.outVal =*/ 0UL,                  /* Output = High */
+        /*.driveMode =*/ CY_GPIO_DM_PULLUP, /* Resistive pull-up, input buffer on */
+        /*.hsiom =*/ (en_hsiom_sel_t)0,     /* Software controlled pin */
+        /*.intEdge =*/ CY_GPIO_INTR_DISABLE, /* Rising edge interrupt */
+        /*.intMask =*/ 0UL,                 /* Disable port interrupt for this pin */
+        /*.vtrip =*/ CY_GPIO_VTRIP_CMOS,    /* CMOS voltage trip */
+        /*.slewRate =*/ CY_GPIO_SLEW_FAST,  /* Fast slew rate */
+        /*.driveSel =*/ CY_GPIO_DRIVE_FULL, /* Full drive strength */
+        /*.vregEn =*/ 0UL,                  /* SIO-specific setting - ignored */
+        /*.ibufMode =*/ 0UL,                /* SIO-specific setting - ignored */
+        /*.vtripSel =*/ 0UL,                /* SIO-specific setting - ignored */
+        /*.vrefSel =*/ 0UL,                 /* SIO-specific setting - ignored */
+        /*.vohSel =*/ 0UL                   /* SIO-specific setting - ignored */
+    };
+    
+    if(mode == INPUT)
+    {
+        pinConfig.driveMode = CY_GPIO_DM_HIGHZ;
+    }
+    else if (mode == OUTPUT)
+    {
+        pinConfig.driveMode = CY_GPIO_DM_STRONG;
+    }
+    
+    else if (mode == INPUT_PULLUP)
+    {
+        pinConfig.outVal = 1;
+        pinConfig.driveMode = CY_GPIO_DM_PULLUP;
+    }
+    
+    else
+    {
+        assert(0); // 
+    }
+    
+    if(CY_GPIO_SUCCESS != Cy_GPIO_Pin_Init(myPin->psocPort, myPin->psocPin, &pinConfig))
+    {
+        assert(0);
+    }
+
 }
 
-void delayMicroseconds(int ms)
+void delayMicroseconds(int us)
 {
-    //
-    // TODO - delay a fixed number of microseconds
-    //
-    assert(0) ;     // Remove me when this is implemented
+    (*arduino_timing->delayMicrosecondsFcn)(us);
 }
 
 void delay(int ms)
 {
-    //
-    // TODO - delay for a given number of milliseconds
-    //
-    assert(0) ;     // Remove me when this is implemented
+    (*arduino_timing->delayFcn)(ms);
 }
 
 unsigned long millis()
 {
-    //
-    // TODO - return the current number of milliseconds since
-    //        some type of epoch.  This is used to run loops that
-    //        do work but need to time out after a given amount of
-    //        time.
-    //
-    //        long start = millis() ;
-    //        while (millis() - start < 50)
-    //        {
-    //             doSomethingForUpTo50Ms() ;
-    //        }
-    //
-    assert(0) ;     // Remove me when this is implemented
+    return (*arduino_timing->millisFcn)();
 }
-
-/* [] END OF FILE */

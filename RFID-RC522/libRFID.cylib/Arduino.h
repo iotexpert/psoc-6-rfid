@@ -25,6 +25,7 @@
 //
 #define INPUT		(0)
 #define OUTPUT		(1)
+#define INPUT_PULLUP (2)
 
 void digitalWrite(int pin, int value) ;
 int digitalRead(int pin) ;
@@ -45,4 +46,3 @@ unsigned long millis() ;
 //
 typedef uint8_t byte ;
 typedef const char *__FlashStringHelper ;
-

@@ -1,20 +1,69 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
+
 #include "project.h"
 #include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
+#include "MFRC522Interface.h"
+#include "ArdInterface.h"
+#include "ArdSerialInterface.h"
+#include "ArdSpiInterface.h"
 
-#include "rfid.h"
+
+const psocPin_t pinMap[] = {
+        {1,GPIO_PRT10,3},
+        {2,MFRC522_RST_PORT,MFRC522_RST_NUM}  
+    };
+
+
+const arduino_timing_t timingFunctions = 
+    {
+        .delayFcn = vTaskDelay,
+        .millisFcn = xTaskGetTickCount,
+        .delayMicrosecondsFcn =  CyDelayUs
+    };
+
+void setupArduino()
+{
+    
+    psocArduinoConfigure(pinMap , sizeof(pinMap)/sizeof(pinMap[0]), &timingFunctions);
+    
+    #if 0
+        
+    psocArduinoTestPin2(3,1);
+    psocArduinoTestPin1(2,1);    
+    psocArduinoTestPin(1); // this will never return;
+    #endif
+    
+    
+    psocArduinoSerialSetup(UART_1_HW);  
+//    psocArduinoSerialTest();
+//    while(1);
+    
+}
+
+void testReader(RFIDHandle h)
+{
+  
+  
+  printf(("*****************************\r\n"));
+  printf(("MFRC522 Digital self test\r\n"));
+  printf(("*****************************\r\n"));
+  PCD_DumpVersionToSerial(h);  // Show version of PCD - MFRC522 Card Reader
+  printf(("-----------------------------\r\n"));
+  printf(("Only known versions supported\r\n"));
+  printf(("-----------------------------\r\n"));
+  printf(("Performing test...\r\n"));
+  bool result = PCD_PerformSelfTest(h); // perform the test
+  printf("-----------------------------\r\n");
+  printf("Result: ");
+  if (result)
+    printf(("OK"));
+  else
+    printf(("DEFECT or UNKNOWN\r\n"));
+  printf("\r\n");
+    
+}
+
 
 void uartTask(void *arg)
 {
@@ -23,19 +72,7 @@ void uartTask(void *arg)
     setvbuf( stdin, NULL, _IONBF, 0 ); 
     
     RFIDHandle h ;
-    
-    
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    
-    //
-    // Note, pins 0 and 1 for chipsel and reset are not physical pins.  The
-    // RFID library refers to pins with this integer, and the Arduino.cpp file
-    // in the RFID library must be updated to refer to the correct PSoC pin
-    // when it sees pin 0 or pin 1.
-    //
-    h = createRFID(0, 1, 0, 1) ;
-    
-    
+    setupArduino();
     while(1)
     {
         char c;
@@ -45,7 +82,22 @@ void uartTask(void *arg)
         
         switch(c)
         {
+            case 'q':
+             printf("CreateRFID call\r\n");
+             h = createRFID(SPI_1_HW,1, 2) ;
+             printf("CreateRFID Done\r\n");
+            break;
+            
+            case 'w':
+                printf("Testing Reader\r\n");   
+                testReader(h);
+                printf("Test Reader Succeeded\r\n");
+            break;
+                
             case 'a':
+                Cy_GPIO_Write(MFRC522_SS_PORT,MFRC522_SS_NUM,0);
+                vTaskDelay(1);
+                    
                 printf("Reading register %X\r\n",reg);
                 Cy_SCB_SPI_ClearRxFifo(SPI_1_HW);
                 
@@ -70,16 +122,21 @@ void uartTask(void *arg)
                 
                 
                 printf("Num in rx fifo = %d\r\n",Cy_SCB_SPI_GetNumInRxFifo(SPI_1_HW));
+                Cy_GPIO_Write(MFRC522_SS_PORT,MFRC522_SS_NUM,1);
                 
                 break;
                     
             case '?':
+                
                 printf("?\tHelp\r\n");
             break;
         }
     }
     
 }
+
+
+
 
 int main(void)
 {

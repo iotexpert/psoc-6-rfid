@@ -2472,7 +2472,7 @@
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Assembly@General@Join Data and Text Sections" v="False" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Assembly@General@Suppress Warnings" v="True" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Assembly@Command Line@Command Line" v="" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@General@Additional Include Directories" v="\\Mac\Home\Downloads\RFID-2\libRFID.cylib" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@General@Additional Include Directories" v="..\libRFID.cylib" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@General@Create Listing File" v="True" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@General@Default Char Unsigned" v="False" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@General@Generate Debugging Information" v="True" />
@@ -2490,7 +2490,7 @@
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@C/C++@Command Line@Command Line" v="" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Library Generation@Command Line@Command Line" v="" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Additional Libraries" v="RFID" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Additional Library Directories" v="\\Mac\Home\Downloads\RFID-2\libRFID.cylib\CortexM4\ARM_GCC_541\Debug" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Additional Library Directories" v="..\libRFID.cylib\CortexM4\ARM_GCC_541\Debug" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Additional Link Files" v="" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Generate Map File" v="True" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4@Linker@General@Custom Linker Script" v="" />
@@ -2896,8 +2896,8 @@
 <define v="CY_PSOC_CREATOR_USED=1" />
 <define v="CY8C6347BZI_BLD53" />
 </defines>
-<pdl_path_for_last_code_gen v="C:\Program Files (x86)\Cypress\PDL\3.0.1" />
-<pdl_rel_ver_for_last_code_gen v="3.0.1+build.1510" />
+<pdl_path_for_last_code_gen v="C:\Program Files (x86)\Cypress\PDL\3.0.1\" />
+<pdl_rel_ver_for_last_code_gen v="3.0.1+build.1508" />
 <CyGuid_495451fe-d201-4d01-b22d-5d3f5609ac37 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtComponentMgrSerialize" version="4" xml_contents_version="1">
 <library_deps>
 <library_dep persistent="${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj" />

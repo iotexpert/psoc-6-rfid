@@ -145,7 +145,7 @@ typedef enum {
 /// @param chipsel the chip select pin for the device
 /// @param reset the reset pin for the device
 /// @returns BadRFIDHandle if there is an error, otherwise an HANDLE to the RFID hardware
-RFIDHandle createRFID(int spi, int serial, int chipsel, int reset) ;
+RFIDHandle createRFID(CySCB_Type * spi, int chipsel, int reset) ;
 
 /// @brief Destroy a software RFID module
 /// @param h the handle to the module

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include "scb/cy_scb_common.h"
 
 #ifndef LSBFIRST
 #define LSBFIRST 0
@@ -57,13 +58,13 @@ class SPIClass
 {
 public:
     SPIClass() ;
-    int init(int scbinst) ;
+    int init(CySCB_Type * scbinst) ;
     void beginTransaction(const SPISettings &settings) ;
     uint8_t transfer(uint8_t data) ;
     void endTransaction() ;
     
 private:
-    int m_scbinst ;
+    CySCB_Type *m_scbinst;
 } ;
 
 extern SPIClass SPI ;

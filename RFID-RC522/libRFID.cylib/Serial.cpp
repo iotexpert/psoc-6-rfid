@@ -10,40 +10,77 @@
  * ========================================
 */
 
+
 #include "Serial.h"
+#include "scb/cy_scb_common.h"
+#include "scb/cy_scb_uart.h"
+
+
+#include "ArdSerialInterface.h"
+#include <stdio.h>
 
 SerialClass Serial ;
 
+CySCB_Type *myUart;
+
+     
+void psocArduinoSerialSetup(CySCB_Type *scb)
+{
+    myUart = scb;
+}
+
+void psocArduinoSerialTest()
+{
+    Serial.print("Serial.print\r\n");
+    Serial.print("22=");
+    Serial.print(22,DEC);
+    Serial.println();
+    Serial.print("50=");
+    Serial.print(50,HEX);
+    Serial.println();
+    Serial.println("Serial.println");
+    
+    Serial.print("22=");
+    Serial.println(22,DEC);
+    Serial.print("50=");
+    Serial.println(50,HEX); 
+
+}
+
+
 SerialClass::SerialClass()
 {
-    //
-    // TODO - initialize the UART to output debug output through a given
-    //        SCB block.  If the UART used for debugging is initialized
-    //        elsewhere, than this can be empty and the methods below just
-    //        talk to the already initialized SCB block to send the output
-    //        over the UART.
-    //
+    // For now assume that they setup the scb as a uart    
 }
 
 void SerialClass::print(const char * const * str_p)
 {
-    //
-    // TODO - print the string to the uart output
-    //
+    Cy_SCB_UART_PutString(myUart,(char *)str_p);
 }
 
 void SerialClass::print(const char * str_p)
 {
-    //
-    // TODO - print the string to the uart output
-    //
+    Cy_SCB_UART_PutString(myUart,str_p);
+
 }
 
 void SerialClass::print(uint8_t v, int base)
 {
-    //
-    // TODO - print the eight bit value in the base given
-    //
+    char buff[4]; 
+    switch(base)
+    {
+        case HEX:
+            sprintf(buff,"%X",v);
+        break;
+        
+        default:
+        case DEC:
+            sprintf(buff,"%u",v);
+        break;
+       
+    }
+    Cy_SCB_UART_PutString(myUart,buff);
+
 }
 
 void SerialClass::println(const char * const str_p)
@@ -66,10 +103,5 @@ void SerialClass::println(uint8_t v, int base)
 
 void SerialClass::println()
 {
-    //
-    // TODO - print a newline character
-    //
+    Cy_SCB_UART_PutString(myUart,"\r\n");
 }
-
-
-/* [] END OF FILE */

@@ -12,7 +12,7 @@
 
 #include "Arduino.h"
 #include "MFRC522.h"
-#include "rfid.h"
+#include "MFRC522Interface.h"
 #include <assert.h>
 
 //
@@ -67,7 +67,7 @@ MFRC522 rfiddev ;
 #endif
 
 
-RFIDHandle createRFID(int spi, int serial, int chipsel, int reset)
+RFIDHandle createRFID(CySCB_Type * spi, int chipsel, int reset)
 {
     RFIDHandle h = BadRFIDHandle ;
     
@@ -120,7 +120,7 @@ RFIDHandle createRFID(int spi, int serial, int chipsel, int reset)
     if (SPI.init(spi))
         return BadRFIDHandle ;
         
-    rfiddev.PCD_Init(chipsel, reset) ;
+    rfiddev.PCD_Init(chipsel, reset,&SPI) ;
     
     h = reinterpret_cast<RFIDHandle>(&rfiddev) ;
     
